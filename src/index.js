@@ -1,10 +1,21 @@
-import "./styles.css";
+const number = document.getElementById("number");
+const count = document.getElementById("count");
+const reset = document.getElementById("reset");
+let countNumber = 0;
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const initiateCounting = () => (number.innerText = countNumber);
+
+const addCount = () => {
+	countNumber++;
+	initiateCounting();
+};
+
+const resetCount = () => {
+	countNumber = 0;
+	initiateCounting();
+};
+
+count.addEventListener("click", addCount);
+reset.addEventListener("click", resetCount);
+
+initiateCounting();

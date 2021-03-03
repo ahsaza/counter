@@ -1,3 +1,22 @@
 body {
-  font-family: sans-serif;
+	text-align: center;
+	font-family: candara;
+}
+
+#number {
+	font-size: 30px;
+	margin: 20px;
+}
+
+button {
+	background: none;
+	border: 1px solid;
+	padding: 10px 15px;
+	font-weight: bold;
+}
+
+button:nth-child(3) {
+	background-color: red;
+	color: white;
+	border-color: black;
 }
